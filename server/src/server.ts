@@ -8,7 +8,6 @@ app.use(cors());
 app.use(express.json());
 app.use(routes);
 
-
 // Endereço da API
 app.listen(3333);
 

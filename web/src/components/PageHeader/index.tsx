@@ -8,6 +8,7 @@ import './styles.css';
 
 interface PageHeaderProps {
     title: string;
+    description?: string;
 }
 
 const PageHeader:React.FunctionComponent<PageHeaderProps> = (props) => {
@@ -23,6 +24,9 @@ const PageHeader:React.FunctionComponent<PageHeaderProps> = (props) => {
 
             <div className="header-content">
                 <strong>{props.title}</strong>
+                
+                {/** if ternário sem else, a segunda parte so acontece se a primeira for true */}
+                { props.description && <p>{props.description}</p> } 
                 
                 {props.children}
             </div>
